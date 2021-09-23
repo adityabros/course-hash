@@ -1,6 +1,16 @@
 <ul id="menu_ul">
   <li *ngFor="let menu of menus">
 
-    <a routerLink="{{menu.url}}">{{menu.label}}</a>
+
+    <div *ngIf="menu.image_available; then thenBlock else elseBlock"> </div>
+
+    <ng-template #thenBlock>
+      <a routerLink="{{menu.url}}"><img src="{{menu.img}}" alt=""></a>
+    </ng-template>
+    <ng-template #elseBlock>
+      <a routerLink="{{menu.url}}" class="menu_label">{{menu.label}}</a>
+    </ng-template>
+
+
   </li>
 </ul>

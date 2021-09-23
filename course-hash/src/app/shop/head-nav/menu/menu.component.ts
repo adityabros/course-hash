@@ -15,21 +15,25 @@ export class MenuComponent implements OnInit {
   menus = [
     {
       "label":"COURSES",
-      "url":"/"
+      "url":"/",
+      "image_available":false,
     },
     {
       "label":"MY WISHLIST",
-      "url":"/wishlist"
+      "url":"/wishlist",
+      "image_available":false,
     },
     {
       "label":"Cart",
       "img":"assets/shopping-cart.svg",
-      "url":"/cart"
+      "url":"/cart",
+      "image_available":true,
     },
     {
       "label":"Profile",
       "img":"assets/noun_profile_2068277.svg",
-      "url":"/profile"
+      "url":"/profile",
+      "image_available":true,
     },
 
   ]
