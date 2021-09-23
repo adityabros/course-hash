@@ -1,0 +1,14 @@
+.product_card_box{
+    display: flex;
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
+    padding: 10px 40px;
+    justify-content: row;
+    justify-content: space-between;
+    margin: 20px;
+}
+.title_of_product{
+  width: 23%;
+}
+.author_of_product{
+  width: 15%;
+}

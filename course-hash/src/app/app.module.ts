@@ -13,6 +13,8 @@ import { CartComponent } from './shop/body/cart/cart.component';
 import { ProfileComponent } from './shop/body/profile/profile.component';
 import { RouterModule } from '@angular/router';
 import { TitleComponent } from './shop/body/common/title/title.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CoursesItemsComponent } from './shop/body/courses/courses-items/courses-items.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,8 @@ import { TitleComponent } from './shop/body/common/title/title.component';
     WishlistComponent,
     CartComponent,
     ProfileComponent,
-    TitleComponent
+    TitleComponent,
+    CoursesItemsComponent
   ],
   imports: [
     BrowserModule,
@@ -36,6 +39,7 @@ import { TitleComponent } from './shop/body/common/title/title.component';
       {path: 'profile', component: ProfileComponent},
       {path: 'cart', component: CartComponent},
     ]),
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
