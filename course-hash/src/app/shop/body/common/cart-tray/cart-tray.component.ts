@@ -12,11 +12,21 @@ export class CartTrayComponent implements OnInit {
   constructor(cart_service:CurrentCartService) {
     this.cart_service = cart_service;
    }
-
-
+   subscription:any;
+   total_cart_item_value:number = 0 ;
 
   ngOnInit(): void {
     this.cart_items = this.cart_service.cart_items;
+    // this.total_cart_item_value = this.cart_service.total_cart_item_value;
+    this.subscription=this.cart_service.changeInCart.subscribe(
+      () => {
+        this.cart_items.forEach((cart_item:any) =>
+                      {
+                        console.log(cart_item.actual_price);
+                        this.total_cart_item_value+=parseInt(cart_item.actual_price);
+                        })
+      }
+    )
   }
 
 

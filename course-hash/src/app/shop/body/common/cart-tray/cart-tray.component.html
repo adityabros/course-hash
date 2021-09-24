@@ -1,12 +1,18 @@
-<p>cart-tray works!</p>
+<!-- <p>cart-tray works!</p> -->
 
-<div>
+<div class="cart_item_div">
 
   <div class="cart_item_heading"><h5>Your Cart Items</h5></div>
-  <div>
-    <div *ngFor="let item of cart_items">
-      <p>{{item.author}}</p>
+  <div class="item_div_parent">
+    <div *ngFor="let item of cart_items" class="item_div">
+
+        <p>{{item.title}}</p>
+        <p style="text-align: right;margin-right: 10%;"><b>Rs. {{item.actual_price}}</b> </p>
     </div>
+  </div>
+  <div class="item_div_footer">
+      <h4>Total Cart Value</h4>
+      <h2>Rs. {{total_cart_item_value}}</h2>
   </div>
   <div></div>
   <div></div>

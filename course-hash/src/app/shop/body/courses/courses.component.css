@@ -6,4 +6,5 @@ app-courses-items{
 }
 app-cart-tray{
   flex:1;
+  margin: 20px;
 }

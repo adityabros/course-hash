@@ -1,0 +1,16 @@
+.cart_item_div{
+  box-shadow: 2px 2px 2px 2px #e6e6e6;
+}
+.cart_item_heading h5{
+  font-size: 15px;
+  box-shadow: 1px 1px 1px 1qpx #e6e6e6;
+}
+.item_div{
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+}
+.item_div_parent{
+  height: 40vh;
+  overflow-y: scroll;
+}
