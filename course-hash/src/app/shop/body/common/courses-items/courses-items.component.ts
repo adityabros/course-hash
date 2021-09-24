@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CurrentCartService } from '../current-cart.service';
 
 @Component({
   selector: 'app-courses-items',
@@ -6,10 +7,22 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./courses-items.component.css']
 })
 export class CoursesItemsComponent implements OnInit {
+  cart_service:CurrentCartService;
 
-  constructor() { }
+  constructor(cart_service:CurrentCartService) {
+    this.cart_service = cart_service;
+   }
 
   ngOnInit(): void {
+  }
+
+  add_to_cart(id_of_item:string){
+      console.log(id_of_item);
+      this.cart_service.cart_items.push(this.courses[parseInt(id_of_item)-1])
+  }
+
+  add_wishlist(id_of_item:string){
+    console.log("Wishlist = ",id_of_item);
   }
 
   courses =[{

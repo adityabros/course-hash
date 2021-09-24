@@ -14,7 +14,8 @@ import { ProfileComponent } from './shop/body/profile/profile.component';
 import { RouterModule } from '@angular/router';
 import { TitleComponent } from './shop/body/common/title/title.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { CoursesItemsComponent } from './shop/body/courses/courses-items/courses-items.component';
+import { CoursesItemsComponent } from './shop/body/common/courses-items/courses-items.component';
+import { CartTrayComponent } from './shop/body/common/cart-tray/cart-tray.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { CoursesItemsComponent } from './shop/body/courses/courses-items/courses
     CartComponent,
     ProfileComponent,
     TitleComponent,
-    CoursesItemsComponent
+    CoursesItemsComponent,
+    CartTrayComponent
   ],
   imports: [
     BrowserModule,

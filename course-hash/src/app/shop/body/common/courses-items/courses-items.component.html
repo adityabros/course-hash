@@ -6,12 +6,12 @@
 
   <div class="author_of_product course-item-small">{{course.author}}</div>
 
-  <div class="wishlist_of_product course-item-small"><button>&#9733;</button> </div>
+  <div class="wishlist_of_product course-item-small" ><button (click)="add_wishlist(course.id)">&#9733;</button> </div>
 
   <div class="disc_price_of_product course-item-small">Rs. {{course.discounted_price}}</div>
 
   <div class="price_of_product course-item-small">Rs. {{course.actual_price}}</div>
 
-  <div class="add_to_cart course-item-small"><button>Add to Cart</button></div>
+  <div class="add_to_cart course-item-small" ><button (click)="add_to_cart(course.id)">Add to Cart</button></div>
 
 </div>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CurrentCartService } from '../../body/common/current-cart.service';
 
 @Component({
   selector: 'app-menu',
@@ -6,11 +7,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./menu.component.css']
 })
 export class MenuComponent implements OnInit {
+  totalCartItems:any=[];
+  cart_service:CurrentCartService;
+  constructor(cart_service:CurrentCartService) {
+    this.cart_service = cart_service;
+   }
 
-  constructor() { }
 
   ngOnInit(): void {
+    this.totalCartItems = this.cart_service.cart_items.length;
   }
+  // totalCartItems = this.cart_service.cart_items.length;
 
   menus = [
     {

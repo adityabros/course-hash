@@ -1,0 +1,9 @@
+.parent_div_courses{
+  display: flex;
+}
+app-courses-items{
+  flex:3;
+}
+app-cart-tray{
+  flex:1;
+}
