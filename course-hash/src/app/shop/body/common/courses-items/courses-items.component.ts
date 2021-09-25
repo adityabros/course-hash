@@ -20,8 +20,17 @@ export class CoursesItemsComponent implements OnInit {
 
   add_to_cart(id_of_item:string){
       console.log(id_of_item);
+      var n = this.cart_service.cart_items.length;
+      for(var i =0;i<n;i++){
+        let curr_item = this.cart_service.cart_items[i];
+        if(curr_item.id == parseInt(id_of_item)){
+          alert("Item Already Exists");
+          return;
+        }
+      }
       this.cart_service.cart_items.push(this.courses[parseInt(id_of_item)-1])
       this.cart_service.changed();
+      alert("Item Successfully added in Cart");
   }
 
   add_wishlist(id_of_item:string){
