@@ -1,2 +1,36 @@
 <app-title [title]="courseTitle"></app-title>
-<p>wishlist works!</p>
+
+<div class="wishlist_parent">
+
+  <div class="parent_div_wishlist">
+
+    <div class="product_card_box" *ngFor="let course of wishlistItems">
+
+      <div class="title_of_product course-item-large">{{course.title}}</div>
+
+      <div class="author_of_product course-item-small">{{course.author}}</div>
+
+      <div *ngIf="course.discounted_price; then thenBlock else elseBlock"> </div>
+
+      <ng-template #thenBlock>
+        <div class="disc_price_of_product course-item-small">Rs. {{course.discounted_price}}/-</div>
+        <div class="price_of_product course-item-small" style="text-decoration-line: line-through;">Rs. {{course.actual_price}}</div>
+      </ng-template>
+      <ng-template #elseBlock>
+        <div class="disc_price_of_product course-item-small">Rs. {{course.actual_price}}/-</div>
+        <div class="price_of_product course-item-small" ></div>
+      </ng-template>
+
+      <div class="add_to_cart course-item-small" ><button (click)="add_to_cart(course.id)">Add to Cart</button></div>
+
+      <div class="add_to_cart course-item-small" ><button (click)="remove_from_wishlist(course.id)"><i class="fa-solid fa-trash-can" ></i></button></div>
+
+    </div>
+
+  </div>
+
+  <app-cart-tray class="app_cart_tray"></app-cart-tray>
+
+</div>
+
+

@@ -1,13 +1,20 @@
 <app-title [title]="courseTitle"></app-title>
-<p>courses works!</p>
-<div>
-  <p>All Courses</p>
-  <select>
-    <option>Low to High</option>
-    <option>High to Low</option>
 
-  </select>
+<div>
+
+  <div class="filter_bar">
+
+    <select>
+      <option>Low to High</option>
+      <option>High to Low</option>
+
+    </select>
+
+  </div>
+
+
 <div class="parent_div_courses">
+
   <app-courses-items></app-courses-items>
   <app-cart-tray></app-cart-tray>
 

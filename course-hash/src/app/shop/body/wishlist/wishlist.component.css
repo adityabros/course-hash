@@ -1,0 +1,50 @@
+.parent_div_wishlist{
+  display: flex;
+  flex-direction: column;
+  flex: 3;
+}
+app-cart-tray{
+  flex:1;
+  margin: 20px;
+}
+
+.product_card_box{
+  /* flex: 3; */
+  box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
+  padding: 10px 40px;
+  justify-content: row;
+  justify-content: space-between;
+  margin: 20px;
+  display: flex;
+}
+
+.course-item-small{
+flex: 1
+}
+
+.course-item-large{
+flex: 2
+}
+
+.title_of_product{
+width: 23%;
+}
+.author_of_product{
+width: 15%;
+font-size: 10px;
+}
+.add_to_cart button{
+color: black;
+background-color: orange;
+}
+.wishlist_of_product{
+width: 10%;
+}
+
+.wishlist_parent{
+  display: flex;
+}
+.app_cart_tray{
+  flex: 1;
+}
+
