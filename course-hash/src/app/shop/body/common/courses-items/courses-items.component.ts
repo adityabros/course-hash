@@ -13,8 +13,11 @@ export class CoursesItemsComponent implements OnInit {
   constructor(cart_service:CurrentCartService) {
     this.cart_service = cart_service;
    }
-
+  courses:any = [];
   ngOnInit(): void {
+    this.courses = this.cart_service.courses;
+    this.cart_service.assign_final_price();
+    this.cart_service.courses = this.cart_service.courses.sort((a:any,b:any)=> (parseFloat(a.final_price) > parseFloat(b.final_price) ? 1 : -1))
   }
 
 
@@ -49,7 +52,7 @@ export class CoursesItemsComponent implements OnInit {
 
   }
 
-  courses =[{
+  coursesOld =[{
 
     "tags": [
         "accusantium",

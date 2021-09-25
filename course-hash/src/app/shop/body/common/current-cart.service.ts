@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs';
+import { CoursesComponent } from '../courses/courses.component';
 
 @Injectable({
   providedIn: 'root'
@@ -11,6 +12,21 @@ export class CurrentCartService {
 
   changed(){
     this.changeInCart.next();
+  }
+
+  assign_final_price(){
+    for (let index = 0; index < this.courses.length; index++) {
+      var disc_price = this.courses[index].discounted_price;
+      if(disc_price != null){
+        this.courses[index].final_price = disc_price
+      }
+      else{
+        this.courses[index].final_price = this.courses[index].actual_price;
+      }
+      console.log("id = ",this.courses[index].id,"\n"," Pirce = ",this.courses[index].final_price);
+      this.courses[index];
+
+    }
   }
 
 
@@ -32,7 +48,8 @@ export class CurrentCartService {
           "actual_price": "840.00",
           "author": "Arthur Hansen",
           "title": "doloribus sapiente facere sit laborum qui",
-          "id": "1"
+          "id": "1",
+          "final_price":"",
       },
       {
           "tags": [
@@ -46,7 +63,8 @@ export class CurrentCartService {
           "actual_price": "789.00",
           "author": "Velma Mohr",
           "title": "impedit velit eaque vero ut quod",
-          "id": "2"
+          "id": "2",
+          "final_price":"",
       },
       {
           "tags": [
@@ -60,7 +78,8 @@ export class CurrentCartService {
           "actual_price": "838.00",
           "author": "Christine Anderson",
           "title": "alias laudantium id nostrum laborum",
-          "id": "3"
+          "id": "3",
+          "final_price":"",
       },
       {
           "tags": [
@@ -72,7 +91,8 @@ export class CurrentCartService {
           "actual_price": "735.00",
           "author": "Doug Schiller",
           "title": "saepe quam est",
-          "id": "4"
+          "id": "4",
+          "final_price":"",
       },
       {
           "tags": [
@@ -86,7 +106,8 @@ export class CurrentCartService {
           "actual_price": "728.00",
           "author": "Terry Lubowitz",
           "title": "at omnis nobis adipisci sint",
-          "id": "5"
+          "id": "5",
+          "final_price":"",
       },
       {
           "tags": [
@@ -100,7 +121,8 @@ export class CurrentCartService {
           "actual_price": "819.00",
           "author": "Jacquelyn Vandervort",
           "title": "voluptates similique mollitia veniam",
-          "id": "6"
+          "id": "6",
+          "final_price":"",
       },
       {
           "tags": [
@@ -113,7 +135,8 @@ export class CurrentCartService {
           "actual_price": "722.00",
           "author": "Karla Dibbert",
           "title": "nostrum quod provident quia",
-          "id": "7"
+          "id": "7",
+          "final_price":"",
       },
       {
           "tags": [
@@ -126,7 +149,8 @@ export class CurrentCartService {
           "actual_price": "712.00",
           "author": "Dr. Ollie Kuhn",
           "title": "sequi magnam id culpa",
-          "id": "8"
+          "id": "8",
+          "final_price":"",
       },
       {
           "tags": [
@@ -138,7 +162,8 @@ export class CurrentCartService {
           "actual_price": "775.00",
           "author": "Ana Schimmel",
           "title": "veritatis occaecati sint eos",
-          "id": "9"
+          "id": "9",
+          "final_price":"",
       },
       {
           "tags": [
@@ -151,7 +176,8 @@ export class CurrentCartService {
           "actual_price": "704.00",
           "author": "Chester Corkery",
           "title": "delectus et ea aut ipsum assumenda",
-          "id": "10"
+          "id": "10",
+          "final_price":"",
       },
       {
           "tags": [
@@ -165,7 +191,8 @@ export class CurrentCartService {
           "actual_price": "764.00",
           "author": "Amy Bins",
           "title": "ut rerum ipsam quos ratione aut",
-          "id": "11"
+          "id": "11",
+          "final_price":"",
       },
       {
           "tags": [
@@ -177,7 +204,8 @@ export class CurrentCartService {
           "actual_price": "737.00",
           "author": "Julie Hilpert",
           "title": "et voluptate tempore fugiat laudantium",
-          "id": "12"
+          "id": "12",
+          "final_price":"",
       },
       {
           "tags": [
@@ -191,7 +219,8 @@ export class CurrentCartService {
           "actual_price": "855.00",
           "author": "Benny Swaniawski",
           "title": "ea sint repudiandae temporibus sit maiores",
-          "id": "13"
+          "id": "13",
+          "final_price":"",
       },
       {
           "tags": [
@@ -203,7 +232,8 @@ export class CurrentCartService {
           "actual_price": "818.00",
           "author": "Tricia Goodwin",
           "title": "et ut est nesciunt nam atque",
-          "id": "14"
+          "id": "14",
+          "final_price":"",
       },
       {
           "tags": [
@@ -216,8 +246,10 @@ export class CurrentCartService {
           "actual_price": "835.00",
           "author": "Kelvin Dooley",
           "title": "doloribus neque aliquam",
-          "id": "15"
+          "id": "15",
+          "final_price":"",
       }
   ];
+
 
 }
