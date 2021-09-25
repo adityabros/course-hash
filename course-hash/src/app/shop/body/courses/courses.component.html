@@ -4,21 +4,28 @@
 
   <div class="filter_bar">
 
-    <select (change)="onSelectedFilter($event)">
+    <select (change)="onSelectedFilter($event)" class="filter_select">
       <option value="low_to_high">Low to High</option>
       <option value="high_to_low">High to Low</option>
 
     </select>
 
+    <input type="text" placeholder="Search.." id="search_bar" (input)="filterCourses($event)" >
+
+
   </div>
 
+  <div *ngIf="noItemsToDisplay" class="product_card_box">
+    No Items to Display!
+  </div>
 
-<div class="parent_div_courses">
+  <div class="parent_div_courses">
 
-  <app-courses-items></app-courses-items>
-  <app-cart-tray></app-cart-tray>
+    <app-courses-items></app-courses-items>
+    <app-cart-tray></app-cart-tray>
 
-</div>
+  </div>
+
 
 </div>
 

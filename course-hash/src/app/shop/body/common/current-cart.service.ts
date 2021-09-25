@@ -6,7 +6,7 @@ import { CoursesComponent } from '../courses/courses.component';
   providedIn: 'root'
 })
 export class CurrentCartService {
-
+  noItemsToDisplay = false;
   constructor() { }
   changeInCart = new Subject<void>();
 
@@ -50,6 +50,7 @@ export class CurrentCartService {
           "title": "doloribus sapiente facere sit laborum qui",
           "id": "1",
           "final_price":"",
+          "display":true
       },
       {
           "tags": [
@@ -65,6 +66,7 @@ export class CurrentCartService {
           "title": "impedit velit eaque vero ut quod",
           "id": "2",
           "final_price":"",
+          "display":true
       },
       {
           "tags": [
@@ -80,6 +82,7 @@ export class CurrentCartService {
           "title": "alias laudantium id nostrum laborum",
           "id": "3",
           "final_price":"",
+          "display":true
       },
       {
           "tags": [
@@ -93,6 +96,7 @@ export class CurrentCartService {
           "title": "saepe quam est",
           "id": "4",
           "final_price":"",
+          "display":true
       },
       {
           "tags": [
@@ -108,6 +112,7 @@ export class CurrentCartService {
           "title": "at omnis nobis adipisci sint",
           "id": "5",
           "final_price":"",
+          "display":true
       },
       {
           "tags": [
@@ -123,6 +128,7 @@ export class CurrentCartService {
           "title": "voluptates similique mollitia veniam",
           "id": "6",
           "final_price":"",
+          "display":true
       },
       {
           "tags": [
@@ -137,6 +143,7 @@ export class CurrentCartService {
           "title": "nostrum quod provident quia",
           "id": "7",
           "final_price":"",
+          "display":true
       },
       {
           "tags": [
@@ -151,6 +158,7 @@ export class CurrentCartService {
           "title": "sequi magnam id culpa",
           "id": "8",
           "final_price":"",
+          "display":true
       },
       {
           "tags": [
@@ -164,6 +172,7 @@ export class CurrentCartService {
           "title": "veritatis occaecati sint eos",
           "id": "9",
           "final_price":"",
+          "display":true
       },
       {
           "tags": [
@@ -178,6 +187,7 @@ export class CurrentCartService {
           "title": "delectus et ea aut ipsum assumenda",
           "id": "10",
           "final_price":"",
+          "display":true
       },
       {
           "tags": [
@@ -193,6 +203,7 @@ export class CurrentCartService {
           "title": "ut rerum ipsam quos ratione aut",
           "id": "11",
           "final_price":"",
+          "display":true
       },
       {
           "tags": [
@@ -206,6 +217,7 @@ export class CurrentCartService {
           "title": "et voluptate tempore fugiat laudantium",
           "id": "12",
           "final_price":"",
+          "display":true
       },
       {
           "tags": [
@@ -221,6 +233,7 @@ export class CurrentCartService {
           "title": "ea sint repudiandae temporibus sit maiores",
           "id": "13",
           "final_price":"",
+          "display":true
       },
       {
           "tags": [
@@ -234,6 +247,7 @@ export class CurrentCartService {
           "title": "et ut est nesciunt nam atque",
           "id": "14",
           "final_price":"",
+          "display":true
       },
       {
           "tags": [
@@ -248,6 +262,7 @@ export class CurrentCartService {
           "title": "doloribus neque aliquam",
           "id": "15",
           "final_price":"",
+          "display":true
       }
   ];
 

@@ -1,23 +1,28 @@
 
-<div class="product_card_box" *ngFor="let course of courses">
+<div  *ngFor="let course of courses" >
 
-  <div class="title_of_product course-item-large">{{course.title}}</div>
+  <div *ngIf="course.display" class="product_card_box">
 
-  <div class="author_of_product course-item-small">{{course.author}}</div>
+    <div class="title_of_product course-item-large">{{course.title}}</div>
 
-  <div class="wishlist_of_product course-item-small" ><button (click)="add_wishlist(course.id)">&#9733;</button> </div>
+    <div class="author_of_product course-item-small">{{course.author}}</div>
 
-  <div *ngIf="course.discounted_price; then thenBlock else elseBlock"> </div>
+    <div class="wishlist_of_product course-item-small" ><button (click)="add_wishlist(course.id)">&#9733;</button> </div>
 
-  <ng-template #thenBlock>
-    <div class="disc_price_of_product course-item-small">Rs. {{course.discounted_price}}/-</div>
-    <div class="price_of_product course-item-small" style="text-decoration-line: line-through;">Rs. {{course.actual_price}}</div>
-  </ng-template>
-  <ng-template #elseBlock>
-    <div class="disc_price_of_product course-item-small">Rs. {{course.actual_price}}/-</div>
-    <div class="price_of_product course-item-small" ></div>
-  </ng-template>
+    <div *ngIf="course.discounted_price; then thenBlock else elseBlock"> </div>
 
-  <div class="add_to_cart course-item-small" ><button (click)="add_to_cart(course.id)">Add to Cart</button></div>
+    <ng-template #thenBlock>
+      <div class="disc_price_of_product course-item-small">Rs. {{course.discounted_price}}/-</div>
+      <div class="price_of_product course-item-small" style="text-decoration-line: line-through;">Rs. {{course.actual_price}}</div>
+    </ng-template>
+    <ng-template #elseBlock>
+      <div class="disc_price_of_product course-item-small">Rs. {{course.actual_price}}/-</div>
+      <div class="price_of_product course-item-small" ></div>
+    </ng-template>
+
+    <div class="add_to_cart course-item-small" ><button (click)="add_to_cart(course.id)">Add to Cart</button></div>
+
+
+  </div>
 
 </div>
