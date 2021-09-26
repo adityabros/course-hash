@@ -1,3 +1,130 @@
 <app-title [title]="courseTitle"></app-title>
-<p>profile works!</p>
+
+<div class="profile_parent_div">
+
+  <div class="image_div">
+    Hi
+  </div>
+
+  <div class="user_entry_section">
+
+    <div class="container">
+      <form action="action_page.php">
+
+        <div class="row">
+
+          <div class="col-25">
+            <label for="dname">Display Name</label>
+          </div>
+          <div class="col-75">
+            <input type="text" id="dname" name="displayname" placeholder="Your Display Name..">
+          </div>
+        </div>
+
+        <div class="row">
+
+          <div class="col-25">
+            <label for="fname">First Name</label>
+          </div>
+          <div class="col-75">
+            <input type="text" id="fname" name="firstname" placeholder="Your name..">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-25">
+            <label for="lname">Last Name</label>
+          </div>
+          <div class="col-75">
+            <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-25">
+            <label for="about_yourself">About Yourself</label>
+          </div>
+          <div class="col-75">
+            <textarea id="about_yourself" name="about_yourself" placeholder="Write something about yourself.." style="height:200px"></textarea>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-25">
+            <label for="area_of_interest">Area of Interest</label>
+          </div>
+          <div class="col-75">
+
+            <input type="checkbox" id="designer" name="designer" value="designer">
+            <label for="designer"> Designer</label><br>
+            <input type="checkbox" id="developer" name="developer" value="developer">
+            <label for="developer"> Developer</label><br>
+            <input type="checkbox" id="project_manager" name="project_manager" value="project_manager">
+            <label for="project_manager"> Project Manager</label><br>
+            <input type="checkbox" id="sales" name="sales" value="sales">
+            <label for="sales"> Sales</label><br>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-25">
+            <label for="area_of_interest">Are you a Student or Professional</label>
+          </div>
+          <div class="col-75">
+
+            <input type="radio" id="student" name="student" value="student">
+            <label for="html">Student</label><br>
+            <input type="radio" id="professional" name="professional" value="professional">
+            <label for="professional">Professional</label><br>
+
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-25">
+            <label for="area_of_interest">How Much Experience do you have ?</label>
+          </div>
+          <div class="col-75">
+
+            <input type="radio" id="0_to_5" name="0_to_5" value="0_to_5">
+            <label for="0_to_5">0-5</label><br>
+            <input type="radio" id="5_to_10" name="5_to_10" value="5_to_10">
+            <label for="5_to_10">5-10</label><br>
+            <input type="radio" id="10_and_above" name="10_and_above" value="10_and_above">
+            <label for="10_and_above">10&Above</label><br>
+
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-25">
+            <label for="area_of_interest">What is your Expertise ? </label>
+          </div>
+          <div class="col-75">
+
+            <input type="radio" id="java" name="java" value="java">
+            <label for="java">Java</label><br>
+            <input type="radio" id="react" name="react" value="react">
+            <label for="react">React</label><br>
+            <input type="radio" id="backend" name="backend" value="backend">
+            <label for="backend">Backend</label><br>
+
+          </div>
+        </div>
+        <div class="row">
+
+          <div class="col-25">
+            <label for="role">Mention your Role</label>
+          </div>
+          <div class="col-75">
+            <input type="text" id="role" name="role" placeholder=" Describe the role you played.">
+          </div>
+        </div>
+
+        <div class="row">
+          <input type="submit" value="Submit">
+        </div>
+      </form>
+    </div>
+
+  </div>
+
+</div>
 
