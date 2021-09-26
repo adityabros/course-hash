@@ -1,2 +1,56 @@
 <app-title [title]="courseTitle"></app-title>
-<p>cart works!</p>
+
+
+<div class="parent_cart">
+
+  <div class="courses_in_cart">
+
+    <div  *ngFor="let course of courses" >
+
+      <div *ngIf="course.display" class="product_card_box">
+
+        <div class="title_of_product course-item-large">{{course.title}}</div>
+
+        <div class="author_of_product course-item-small">{{course.author}}</div>
+
+        <!-- <div class="wishlist_of_product course-item-small" ><button (click)="add_wishlist(course.id)">&#9733;</button> </div> -->
+
+        <div *ngIf="course.discounted_price; then thenBlock else elseBlock"> </div>
+
+        <ng-template #thenBlock>
+          <div class="disc_price_of_product course-item-small">Rs. {{course.discounted_price}}/-</div>
+          <div class="price_of_product course-item-small" style="text-decoration-line: line-through;">Rs. {{course.actual_price}}</div>
+        </ng-template>
+        <ng-template #elseBlock>
+          <div class="disc_price_of_product course-item-small">Rs. {{course.actual_price}}/-</div>
+          <div class="price_of_product course-item-small" ></div>
+        </ng-template>
+
+        <!-- <div class="add_to_cart course-item-small" ><button (click)="add_to_cart(course.id)">Add to Cart</button></div> -->
+
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="cart_item_div">
+
+      <!-- <div class="cart_item_heading"><h5>Total Amount</h5></div> -->
+
+      <div class="item_div_footer" >
+          <h4>Total Cart Value</h4>
+          <h2>Rs. {{total_cart_item_value}}</h2>
+          <button style="width: 100%;" (click)="toggleModal()">Checkout</button>
+      </div>
+
+      <div></div>
+      <div></div>
+
+  </div>
+
+
+</div>
+
+<app-modal [(showModal)]="showModal" ></app-modal>

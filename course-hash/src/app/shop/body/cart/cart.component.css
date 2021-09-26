@@ -1,0 +1,64 @@
+.product_card_box{
+  display: flex;
+  box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
+  padding: 10px 40px;
+  justify-content: row;
+  justify-content: space-between;
+  margin: 20px;
+}
+
+.course-item-small{
+flex: 1
+}
+
+.course-item-large{
+flex: 2
+}
+
+.title_of_product{
+width: 23%;
+}
+.author_of_product{
+width: 15%;
+font-size: 10px;
+}
+.add_to_cart button{
+color: black;
+background-color: orange;
+}
+.wishlist_of_product{
+width: 10%;
+}
+
+.cart_item_div{
+  box-shadow: 2px 2px 2px 2px #e6e6e6;
+  /* position:fixed; */
+  width: 25%;
+}
+.cart_item_heading h5{
+  font-size: 15px;
+  box-shadow: 1px 1px 1px 1qpx #e6e6e6;
+}
+.item_div{
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+}
+.item_div_parent{
+  height: 40vh;
+  overflow-y: scroll;
+}
+
+.parent_cart{
+    display: flex;
+    flex-direction: row;
+}
+
+.courses_in_cart{
+  flex: 3;
+}
+.cart_item_div{
+  flex: 1;
+}
+
+

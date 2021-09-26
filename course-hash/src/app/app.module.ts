@@ -16,6 +16,7 @@ import { TitleComponent } from './shop/body/common/title/title.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CoursesItemsComponent } from './shop/body/common/courses-items/courses-items.component';
 import { CartTrayComponent } from './shop/body/common/cart-tray/cart-tray.component';
+import { ModalComponent } from './shop/body/cart/modal/modal.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { CartTrayComponent } from './shop/body/common/cart-tray/cart-tray.compon
     ProfileComponent,
     TitleComponent,
     CoursesItemsComponent,
-    CartTrayComponent
+    CartTrayComponent,
+    ModalComponent
   ],
   imports: [
     BrowserModule,

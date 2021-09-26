@@ -9,7 +9,8 @@ export class CurrentCartService {
   noItemsToDisplay = false;
   constructor() { }
   changeInCart = new Subject<void>();
-
+  total_cart_item_value = 0;
+  total_savings = 0;
   changed(){
     this.changeInCart.next();
   }
@@ -32,7 +33,6 @@ export class CurrentCartService {
 
   cart_items:any = [];
   wishlist_items:any = [];
-
 
   courses =[
     {

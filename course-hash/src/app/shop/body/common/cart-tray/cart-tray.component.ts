@@ -20,10 +20,20 @@ export class CartTrayComponent implements OnInit {
     // this.total_cart_item_value = this.cart_service.total_cart_item_value;
     this.subscription=this.cart_service.changeInCart.subscribe(
       () => {
+        this.total_cart_item_value = 0;
+        this.cart_service.total_savings = 0;
         this.cart_items.forEach((cart_item:any) =>
                       {
-                        console.log(cart_item.actual_price);
-                        this.total_cart_item_value+=parseInt(cart_item.actual_price);
+                        // console.log(cart_item.actual_price);
+                        if(cart_item.discounted_price){
+                          this.total_cart_item_value+=parseInt(cart_item.discounted_price);
+                          this.cart_service.total_savings += (cart_item.actual_price-cart_item.discounted_price);
+                        }
+                        else{
+                          this.total_cart_item_value+=parseInt(cart_item.actual_price);
+                        }
+                        this.cart_service.total_cart_item_value = this.total_cart_item_value;
+
                         })
       }
     )
