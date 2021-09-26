@@ -8,6 +8,7 @@ import { Subject } from 'rxjs';
   styleUrls: ['./courses-items.component.css']
 })
 export class CoursesItemsComponent implements OnInit {
+  p: number = 1;
   cart_service:CurrentCartService;
   noItemsToDisplay:Boolean;
   constructor(cart_service:CurrentCartService) {

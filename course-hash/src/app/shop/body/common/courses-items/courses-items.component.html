@@ -1,5 +1,5 @@
 
-<div  *ngFor="let course of courses" >
+<div  *ngFor="let course of courses | paginate: { itemsPerPage: 4, currentPage: p }" >
 
   <div *ngIf="course.display" class="product_card_box">
 
@@ -26,3 +26,5 @@
   </div>
 
 </div>
+<pagination-controls (pageChange)="p = $event"></pagination-controls>
+
