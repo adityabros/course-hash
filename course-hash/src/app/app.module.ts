@@ -18,6 +18,7 @@ import { CoursesItemsComponent } from './shop/body/common/courses-items/courses-
 import { CartTrayComponent } from './shop/body/common/cart-tray/cart-tray.component';
 import { ModalComponent } from './shop/body/cart/modal/modal.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,7 +33,7 @@ import { ModalComponent } from './shop/body/cart/modal/modal.component';
     TitleComponent,
     CoursesItemsComponent,
     CartTrayComponent,
-    ModalComponent
+    ModalComponent,
   ],
   imports: [
     BrowserModule,

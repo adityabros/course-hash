@@ -26,7 +26,7 @@
           <div class="price_of_product course-item-small" ></div>
         </ng-template>
 
-        <!-- <div class="add_to_cart course-item-small" ><button (click)="add_to_cart(course.id)">Add to Cart</button></div> -->
+        <div class="add_to_cart course-item-small" ><button (click)="remove_from_cart(course.id)">Add to Cart</button></div>
 
 
       </div>
@@ -41,7 +41,7 @@
 
       <div class="item_div_footer" >
           <h4>Total Cart Value</h4>
-          <h2>Rs. {{total_cart_item_value}}</h2>
+          <h2 class="total_cart_value">Rs. {{total_cart_item_value}}</h2>
           <button style="width: 100%;" (click)="toggleModal()">Checkout</button>
       </div>
 

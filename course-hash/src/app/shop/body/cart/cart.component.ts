@@ -45,7 +45,13 @@ export class CartComponent implements OnInit {
   showModal: boolean = false;
   toggleModal(): void{
     this.showModal = !this.showModal;
-    console.log(this.showModal)
+    this.cart_service.cart_items = [];
+    this.cart_service.total_cart_item_value = 0;
+      document.getElementsByClassName("courses_in_cart")[0].innerHTML = "";
+      document.getElementsByClassName("total_cart_value")[0].innerHTML="Rs. 0";
+  }
+  remove_from_cart(id_of_item:any){
+
   }
 
 }
