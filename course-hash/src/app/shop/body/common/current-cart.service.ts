@@ -11,6 +11,21 @@ export class CurrentCartService {
   changeInCart = new Subject<void>();
   total_cart_item_value = 0;
   total_savings = 0;
+  profile_data:any = {
+    "displayname": "",
+    "firstname": "",
+    "lastname": "",
+    "about_yourself": "",
+    "student": "",
+    "professional": "",
+    "0_to_5": "",
+    "5_to_10": "",
+    "10_and_above": "",
+    "java": "",
+    "react": "",
+    "backend": "",
+    "role": ""
+}
   changed(){
     this.changeInCart.next();
   }
