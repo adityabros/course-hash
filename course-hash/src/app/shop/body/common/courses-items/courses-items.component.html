@@ -7,7 +7,7 @@
 
     <div class="author_of_product course-item-small">{{course.author}}</div>
 
-    <div class="wishlist_of_product course-item-small" ><button (click)="add_wishlist(course.id)">&#9733;</button> </div>
+    <div class="wishlist_of_product course-item-small wishlist{{course.id}}" ><button (click)="add_wishlist(course.id)">&#9733;</button> </div>
 
     <div *ngIf="course.discounted_price; then thenBlock else elseBlock"> </div>
 
@@ -20,7 +20,7 @@
       <div class="price_of_product course-item-small" ></div>
     </ng-template>
 
-    <div class="add_to_cart course-item-small" ><button (click)="add_to_cart(course.id)">Add to Cart</button></div>
+    <div class="add_to_cart course-item-small" ><button (click)="add_to_cart(course.id)" class="btn">Add to Cart</button></div>
 
 
   </div>

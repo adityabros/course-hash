@@ -1,0 +1,46 @@
+<app-title [title]="courseTitle"></app-title>
+<p>course-item works!</p>
+
+<div class="title">
+  {{curr_item.title}}
+
+  <div style="margin-top: 1%;font-size: 14px;">
+    {{curr_item.description}}
+  </div>
+  <div style="margin-top: 1%;font-size: 10px;color: orange;">
+    {{curr_item.author}}
+  </div>
+  <div class="item_tags" style="display: flex;">
+    <button >{{curr_item.tags}}</button>
+  </div>
+
+
+</div>
+
+<div>
+
+  <div class="course_details_parent" style="display: flex;margin-top: 2%;">
+
+    <div class="course_details" style="border: 1px solid black;flex:2">
+      <h3 style="font-weight: bold;">Course Details</h3>
+      <p>{{curr_item.details}}</p>
+    </div>
+
+    <div class="course_details_box" style="border: 1px solid black;flex:1;display: flex;flex-direction: column;">
+      <div>
+          <iframe width="560"  SameSite="None" height="315" src="https://www.youtube.com/embed/kuJNVKHHpGk?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+
+      <div style="display: flex;flex-direction: row;text-align: center;">
+        <div class="add_to_cart course-item-small " style="margin-left: 28%;"><button (click)="add_to_cart(curr_item.id)" class="btn" style="background-color: orange;">Add to Cart</button></div>
+        <div class="add_to_cart course-item-small " style="margin-left: 4%;"><button (click)="add_wishlist(curr_item.id)" class="btn btn-success" >Add to Wishlist</button></div>
+      </div>
+
+    </div>
+
+  </div>
+
+
+</div>
+
+

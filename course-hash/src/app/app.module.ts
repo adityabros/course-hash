@@ -19,6 +19,7 @@ import { CartTrayComponent } from './shop/body/common/cart-tray/cart-tray.compon
 import { ModalComponent } from './shop/body/cart/modal/modal.component';
 import { FormsModule } from '@angular/forms';
 import {NgxPaginationModule} from 'ngx-pagination';
+import { CourseItemComponent } from './shop/body/common/courses-items/course-item/course-item.component';
 
 
 @NgModule({
@@ -36,6 +37,7 @@ import {NgxPaginationModule} from 'ngx-pagination';
     CoursesItemsComponent,
     CartTrayComponent,
     ModalComponent,
+    CourseItemComponent,
 
   ],
   imports: [
@@ -48,6 +50,7 @@ import {NgxPaginationModule} from 'ngx-pagination';
       {path: 'wishlist', component: WishlistComponent},
       {path: 'profile', component: ProfileComponent},
       {path: 'cart', component: CartComponent},
+      {path: 'course-item/:id', component: CourseItemComponent},
     ]),
     BrowserAnimationsModule,
   ],

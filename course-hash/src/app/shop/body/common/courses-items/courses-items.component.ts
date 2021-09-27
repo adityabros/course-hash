@@ -49,6 +49,11 @@ export class CoursesItemsComponent implements OnInit {
   }
 
   add_wishlist(id_of_item:string){
+    // // .classList.add("wishlist_added");
+    // var slides = document.getElementsByClassName("wishlist_of_product");
+    // for (var i = 0; i < slides.length; i++) {
+    //   console.log(slides.item(i));
+    // }
     console.log("Wishlist = ",id_of_item);
     var n = this.cart_service.wishlist_items.length;
       for(var i =0;i<n;i++){

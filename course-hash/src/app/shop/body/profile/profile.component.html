@@ -17,7 +17,7 @@
             <label for="displayname">Display Name</label>
           </div>
           <div class="col-75">
-            <input type="text" id="displayname" name="displayname" placeholder="Your Display Name.." ngModel>
+            <input type="text" id="displayname" name="displayname" placeholder="Your Display Name.." required ngModel>
           </div>
         </div>
         <script>alert("{{profile_data.displayname}}")</script>
@@ -27,7 +27,7 @@
             <label for="firstname">First Name</label>
           </div>
           <div class="col-75">
-            <input type="text" id="firstname" name="firstname" placeholder="Your name.." ngModel>
+            <input type="text" id="firstname" name="firstname" placeholder="Your name.." required ngModel>
           </div>
         </div>
         <div class="row">
@@ -35,7 +35,7 @@
             <label for="lastname">Last Name</label>
           </div>
           <div class="col-75">
-            <input type="text" id="lastname" name="lastname" placeholder="Your last name.." ngModel>
+            <input type="text" id="lastname" name="lastname" placeholder="Your last name.." required ngModel>
           </div>
         </div>
 
@@ -44,7 +44,7 @@
             <label for="about_yourself">About Yourself</label>
           </div>
           <div class="col-75">
-            <textarea id="about_yourself" name="about_yourself" placeholder="Write something about yourself.." style="height:200px" ngModel></textarea>
+            <textarea id="about_yourself" name="about_yourself" placeholder="Write something about yourself.." style="height:200px" required ngModel></textarea>
           </div>
         </div>
         <div class="row">
@@ -69,9 +69,9 @@
           </div>
           <div class="col-75">
 
-            <input type="radio" id="student" name="student" value="student" ngModel>
+            <input type="radio" id="student" name="student" value="student" required ngModel>
             <label for="html">Student</label><br>
-            <input type="radio" id="professional" name="professional" value="professional" ngModel>
+            <input type="radio" id="professional" name="professional" value="professional" required ngModel>
             <label for="professional">Professional</label><br>
 
           </div>
@@ -83,11 +83,11 @@
           </div>
           <div class="col-75">
 
-            <input type="radio" id="0_to_5" name="0_to_5" value="0_to_5" ngModel>
+            <input type="radio" id="0_to_5" name="0_to_5" value="0_to_5" required ngModel>
             <label for="0_to_5">0-5</label><br>
-            <input type="radio" id="5_to_10" name="5_to_10" value="5_to_10" ngModel>
+            <input type="radio" id="5_to_10" name="5_to_10" value="5_to_10" required ngModel>
             <label for="5_to_10">5-10</label><br>
-            <input type="radio" id="10_and_above" name="10_and_above" value="10_and_above" ngModel>
+            <input type="radio" id="10_and_above" name="10_and_above" value="10_and_above" required ngModel>
             <label for="10_and_above">10&Above</label><br>
 
           </div>
@@ -99,11 +99,11 @@
           </div>
           <div class="col-75">
 
-            <input type="radio" id="java" name="java" value="java" ngModel>
+            <input type="radio" id="java" name="java" value="java" required ngModel>
             <label for="java">Java</label><br>
-            <input type="radio" id="react" name="react" value="react" ngModel>
+            <input type="radio" id="react" name="react" value="react" required ngModel>
             <label for="react">React</label><br>
-            <input type="radio" id="backend" name="backend" value="backend" ngModel>
+            <input type="radio" id="backend" name="backend" value="backend" required ngModel>
             <label for="backend">Backend</label><br>
 
           </div>
@@ -114,12 +114,12 @@
             <label for="role">Mention your Role</label>
           </div>
           <div class="col-75">
-            <input type="text" id="role" name="role" placeholder=" Describe the role you played." ngModel>
+            <input type="text" id="role" name="role" placeholder=" Describe the role you played." required ngModel>
           </div>
         </div>
 
         <div class="row">
-          <input type="submit" value="Save" [disabled]="form.invalid">
+          <input type="submit" value="Save" >
         </div>
       </form>
     </div>
