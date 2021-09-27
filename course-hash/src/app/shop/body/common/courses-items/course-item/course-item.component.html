@@ -1,6 +1,9 @@
 <app-title [title]="courseTitle"></app-title>
-<p>course-item works!</p>
-
+<!-- <p>course-item works!</p> -->
+<ul class="breadcrumb">
+  <li><a routerLink="/">All Courses</a></li>
+  <li><a routerLink="/course-item/{{curr_item.id}}">{{curr_item.title}}</a></li>
+</ul>
 <div class="title">
   {{curr_item.title}}
 

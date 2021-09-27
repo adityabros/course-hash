@@ -17,6 +17,7 @@
 
 .title_of_product{
   width: 23%;
+  cursor: pointer;
 }
 .author_of_product{
   width: 15%;
@@ -31,5 +32,8 @@
 }
 
 .wishlist_added{
+  background-color: yellow;
+}
+.turn-yellow{
   background-color: yellow;
 }

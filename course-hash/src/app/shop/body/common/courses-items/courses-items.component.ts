@@ -11,9 +11,11 @@ export class CoursesItemsComponent implements OnInit {
   p: number = 1;
   cart_service:CurrentCartService;
   noItemsToDisplay:Boolean;
+  userClicked:Boolean;
   constructor(cart_service:CurrentCartService) {
     this.cart_service = cart_service;
     this.noItemsToDisplay = this.cart_service.noItemsToDisplay;
+    this.userClicked = false;
    }
   courses:any = [];
   ngOnInit(): void {
@@ -73,6 +75,9 @@ export class CoursesItemsComponent implements OnInit {
       }
 
     alert("Item Successfully added in Wishlist");
+
+    this.userClicked = true;
+
 
   }
 

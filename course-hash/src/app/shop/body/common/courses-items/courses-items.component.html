@@ -3,11 +3,11 @@
 
   <div *ngIf="course.display" class="product_card_box">
 
-    <div class="title_of_product course-item-large">{{course.title}}</div>
+    <div class="title_of_product course-item-large" routerLink="/course-item/{{course.id}}">{{course.title}}</div>
 
     <div class="author_of_product course-item-small">{{course.author}}</div>
 
-    <div class="wishlist_of_product course-item-small wishlist{{course.id}}" ><button (click)="add_wishlist(course.id)">&#9733;</button> </div>
+    <div class="wishlist_of_product course-item-small wishlist{{course.id}}" ><button (click)="add_wishlist(course.id)" >&#9733;</button> </div>
 
     <div *ngIf="course.discounted_price; then thenBlock else elseBlock"> </div>
 
